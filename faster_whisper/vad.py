@@ -1,13 +1,11 @@
 import bisect
 import functools
 import os
-
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 
 import numpy as np
-
-from faster_whisper.utils import get_assets_path
+from .utils import get_assets_path
 
 
 # The code below is adapted from https://github.com/snakers4/silero-vad.

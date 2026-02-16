@@ -1,11 +1,9 @@
 import logging
 import os
 import re
-
 from typing import List, Optional, Union
 
 import huggingface_hub
-
 from tqdm.auto import tqdm
 
 _MODELS = {

@@ -9,7 +9,6 @@ However, the API is quite low-level so we need to manipulate audio frames direct
 import gc
 import io
 import itertools
-
 from typing import BinaryIO, Union
 
 import av

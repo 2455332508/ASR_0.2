@@ -3,7 +3,6 @@ import json
 import logging
 import os
 import zlib
-
 from dataclasses import asdict, dataclass
 from inspect import signature
 from math import ceil
@@ -13,19 +12,17 @@ from warnings import warn
 import ctranslate2
 import numpy as np
 import tokenizers
-
-from tqdm import tqdm
-
-from faster_whisper.audio import decode_audio, pad_or_trim
-from faster_whisper.feature_extractor import FeatureExtractor
-from faster_whisper.tokenizer import _LANGUAGE_CODES, Tokenizer
-from faster_whisper.utils import download_model, format_timestamp, get_end, get_logger
-from faster_whisper.vad import (
+from .audio import decode_audio, pad_or_trim
+from .feature_extractor import FeatureExtractor
+from .tokenizer import _LANGUAGE_CODES, Tokenizer
+from .utils import download_model, format_timestamp, get_end, get_logger
+from .vad import (
     SpeechTimestampsMap,
     VadOptions,
     collect_chunks,
     get_speech_timestamps,
 )
+from tqdm import tqdm
 
 
 @dataclass
